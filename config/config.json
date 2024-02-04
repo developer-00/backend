@@ -1,0 +1,14 @@
+{
+    "staging":{
+        "config_id": "staging",
+        "port":6000,
+        "secret_key": "",
+        "mongo_db": ""
+    },
+    "production":{
+        "config_id": "production",
+        "port":6000,
+        "secret_key": "",
+        "mongo_db": ""
+    }
+}
