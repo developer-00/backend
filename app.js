@@ -15,6 +15,11 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
 app.set("secret", global.gConfig.secret_key);
 const port = global.gConfig.port;
 
+//common
+app.get("/service/api/market/v1/ping", (req, res) => {
+  res.send({"message": "pong"});
+});
+
 app.listen(port, () => {
   console.log(`Node.js app is listening at http://localhost:${port}`);
 });
