@@ -1,13 +1,15 @@
 {
     "staging":{
         "config_id": "staging",
-        "port":6000,
+        "live":"https://market-api-y42d.onrender.com",
+        "port":8000,
         "secret_key": "",
         "mongo_db": ""
     },
     "production":{
         "config_id": "production",
-        "port":6000,
+        "live":"",
+        "port":8000,
         "secret_key": "",
         "mongo_db": ""
     }
