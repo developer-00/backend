@@ -4,7 +4,7 @@
         "live":"https://market-api-y42d.onrender.com",
         "port":8000,
         "secret_key": "",
-        "mongo_db": ""
+        "mongo_db": "mongodb://127.0.0.1:27017/"
     },
     "production":{
         "config_id": "production",

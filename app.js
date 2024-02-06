@@ -19,14 +19,20 @@ const port = global.gConfig.port;
 
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
+const connectToMongo = require("./db/dbservice");
+connectToMongo();
 app.set("secret", global.gConfig.secret_key);
 
 // Swagger UI
-app.use("/service/api/market/v1/swagger-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use(
+  "/service/api/market/v1/swagger-docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerSpec)
+);
 
 //Routes
 const users = require("./routes/users");
-app.use("/service/api/market/v1", users);
+app.use("/service/api/market/v1/user", users);
 
 app.get("/service/api/market/v1/ping", (req, res) => {
   res.send({ message: "pong" });

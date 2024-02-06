@@ -16,7 +16,7 @@
 //----------------------------------------------USER------------------------------------------------------------------
 /**
  * @swagger
- * /service/api/market/v1/user/post:
+ * /service/api/market/v1/user/sigin:
  *   post:
  *     tags:
  *       - user
